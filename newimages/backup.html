@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Silver Piston</title>
+<link rel="stylesheet" href="/include/css/style.css">
+<link rel="stylesheet" href="/include/css/about.css">
+<link rel="stylesheet" href="/include/css/header.css">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=arrow_back_2" />
+<!-- font size addedd  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=manufacturing" />
+<!-- <link rel="stylesheet" href="/include/css/style.css"> -->
+  <!-- ✅ Tailwind CSS CDN Link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: Customize config if needed -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#f97316',
+          },
+          fontFamily: {
+            custom: ['"MyFont2"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+  .text-animate {
+    opacity: 0;
+  }
+
+  .text-animate.show {
+    opacity: 1;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- Loader -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+
+  <!-- <header>
+  <div class="header-box" >
+      <div class="logo"><img src="/images/SP Logo 2.png" alt="Logo"></div>
+    <div class="navbar">
+      <ul>
+
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#brand">Brand</a></li>
+        <li><a href="#key">Key</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><button class="btn">Join Now</button></li>
+      </ul>
+    </div>
+  </div>
+  </header> -->
+<!-- HEADER -->
+<header>
+  <div class="header-box">
+    <div class="logo">
+      <img src="/images/siverlogo.svg" alt="Logo">
+    </div>
+
+    <!-- HAMBURGER ICON -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="navbar">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#brand">Brand</a></li>
+        <li><a href="#key">Key Engagements</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><button class="btn">Join Now</button></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+  <!-- <section class="home-page">
+    <div class="home-container" id="slider">
+      <h1 class="slide-text active">Md rabik<br> hussain</h1>
+      <h1 class="slide-text active">actionable <br> statgay</h1>
+      <h1 class="slide-text active">Groth with code<br> Break</h1>
+   
+    </div>
+  </section> -->
+ <div class="home-page">
+    <div class="scrolling-text">
+      <div class="text-item show animate__animated animate__fadeInUp">ADAPTIVE<br>STARTEGY</div>
+      <div class="text-item">ACTIONABLE<br>INTELLIGENCE</div>
+      <div class="text-item">DATA-DRIVEN<br>GROTH</div>
+    </div>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll('.text-item');
+    let current = 0;
+
+    setInterval(() => {
+      const currentItem = items[current];
+      currentItem.classList.remove("animate__fadeInUp");
+      currentItem.classList.add("animate__fadeOutUp");
+
+      // Show next
+      current = (current + 1) % items.length;
+      const nextItem = items[current];
+
+      setTimeout(() => {
+        currentItem.classList.remove("show", "animate__animated", "animate__fadeOutUp");
+
+        nextItem.classList.add("show", "animate__animated", "animate__fadeInUp");
+      }, 1000); // match animation duration
+    }, 4000);
+  </script>
+
+
+
+
+
+  <section class="about" id="about">
+    <div>
+      <div class="header-banner">
+        <h1 class="">About Us</h1>
+        <h4>Accelerating Potential. Driving Strategic Growth.</h4>
+        <!-- <div class="bottom-border"></div> -->
+      </div>
+   <div class="about-section">
+  <div class="about-left animate__animated animate__fadeInUp">
+    <h2>01</h2>
+    <p>
+      Founded in 2020, Silverpiston is a strategic operations and business advisory center built to empower organizations with smarter growth pathways. We work hand-in-hand with top ventures to refine strategies, elevate performance, and deliver measurable value — across sectors, borders, and ambitions.
+    </p>
+  </div>
+
+  <div class="about-right animate__animated animate__fadeInUp animate__delay-1s">
+    <h2>02</h2>
+    <p>
+      We act not just as advisors, but as long-term partners — bringing together strategy & execution under one roof. Our approach is grounded in business intelligence, automation, and advanced analytics, helping clients unlock greater operational efficiency and scalable outcomes.
+    </p>
+  </div>
+</div>
+
+
+
+
+    </section>
+
+
+      <div class="aboutsection-end ">
+        <h1 class="fade-in">
+          Our journey is one of relentless progress, shared success, and bold transformation.
+        </h1>
+        <p>
+          We lead with impact. From strategic consulting to operational execution, we work across a range of core functions:
+        </p>
+        <div class="aboutsection-icons-db">
+
+<div class="aboutsection-icons-db-box">
+  <div class="aboutsection-end-icons">
+    <!-- <i class="ri-database-2-line"></i> -->
+         <span>
+      <img src="/images/database.svg" alt="">
+
+    </span>
+  </div>
+  <h5>Strategy &
+Big Data</h5>
+</div>
+<div class="aboutsection-icons-db-box">
+  <div class="aboutsection-end-icons">
+    <!-- <i class="ri-bar-chart-box-line"></i> -->
+         <span>
+      <img src="/images/Frame 1000005104.svg" alt="">
+
+    </span>
+  </div>
+  <h5>Financial Analysis <br>
+& Accounting</h5>
+</div>
+<div class="aboutsection-icons-db-box">
+  <div class="aboutsection-end-icons">
+    <!-- <span class="material-symbols-outlined" style="font-size: 60px; font-weight: 700;">
+      manufacturing
+    </span> -->
+    <span>
+      <img src="/images/manufacturing.svg" alt="">
+
+    </span>
+    <!-- <i class="ri-settings-2-line"></i> -->
+  </div>
+  <h5>Enterprise Resource
+Planning</h5>
+</div>
+
+<div class="aboutsection-icons-db-box">
+  <div class="aboutsection-end-icons">
+    <!-- <i class="ri-database-2-line"></i> -->
+         <span>
+      <img src="/images/Frame 1000005108.svg" alt="">
+
+    </span>
+  </div>
+  <h5>Automation</h5>
+</div>
+        </div>
+      </div>
+
+   <div class="about-section-2 ">
+     <!-- <p style="font-style: italic;">
+        “
+    </p> -->
+    <p>
+     <span style="font-size: 40px;"> “</span>
+      <br>
+      
+      
+      <span class="leads-wala">
+        Lead with others, leap without fear, keep moving forward, and take charge of your impact — because that's the only way real change happens
+      </span>
+      <!-- <br> -->
+      <!-- <br> -->
+
+    <span style="float: right;">“</span>
+    </p>
+      </div> 
+
+
+     <div class="impact animate__animated animate__slideInUp" id="impact">
+      <div class="header-banner">
+        <h1 class="" style="color: white; border-bottom: 3px solid white;">Impact</h1>
+        <h4 class="text-white" style="color: white;">Turning Strategy Into Value.</h4>
+      </div>
+
+      <div class="impact-para text-white " style="font-size: 22px; padding-bottom: 10px;">
+        We help organizations unlock long-term success with a powerful combination of insight, efficiency, and future-ready technology. Our impact lies in our ability to transform challenges into opportunities — and potential into performance.
+      </div>
+           <div class="impactsection-icons-db">
+
+<div class="impactsection-icons-db-box">
+<div class="content">
+    <div class="icons_hai" style="font-size: 100px;">
+      <!-- <i class="ri-database-2-line" style="font-size: 100px;"></i> -->
+       <img src="/images/monitoring.svg" alt="">
+    </div>
+  <h4>Strategic Value Creation</h4>
+  <p style="font-size: 18px; font-weight: -100; opacity:1;">Driving revenue and profitability through smart, high-impact initiatives.</p>
+
+</div>
+</div>
+
+<div class="impactsection-icons-db-box">
+<div class="content">
+    <div class="icons_hai" style="font-size: 100px;">
+      <!-- <i class="ri-database-2-line" style="font-size: 100px;"></i> -->
+         <img src="/images/Frame 1000005119.svg" alt="">
+    </div>
+  <h4>Sustainsable Growth Methods</h4>
+  <p style="font-size: 18px; font-weight: 100; opacity: 7.1;">Enabling scalable operations that lower costs without compromising quality.</p>
+
+</div>
+</div>
+<div class="impactsection-icons-db-box">
+<div class="content">
+    <div class="icons_hai" style="font-size: 100px;">
+      <!-- <i class="ri-database-2-line" style="font-size: 100px;"></i> -->
+         <img src="/images/settings_b_roll.svg" alt="">
+    </div>
+  <h4>Performance & Operations Optimization</h4>
+  <p style="font-size: 18px; font-weight: 100; opacity: 7.1;">Reimagining workflows to achieve more with less — faster, better, smarter.</p>
+
+</div>
+</div>
+
+<div class="impactsection-icons-db-box">
+<div class="content">
+    <div class="icons_hai" style="font-size: 100px;">
+      <!-- <i class="ri-database-2-line" style="font-size: 100px;"></i> -->
+         <img src="/images/Frame 1000005118.svg" alt="">
+    </div>
+  <h4>Tech-enabled leadership</h4>
+  <p style="font-size: 18px; font-weight: 100; opacity: 7.1;">Empowering teams with digital tools, business intelligence, and real-time data platforms.</p>
+
+</div>
+</div>
+        </div>
+      </div> 
+
+ <section>
+  <div class="brand fade-in" id="brand">
+    <div class="header-banner">
+        <h1 class="" style="color: black; border-bottom: 3px solid black;">Brand Philosophy</h1>
+        <h4 class="text-white" style="color: #626262;">Built on Belief. Driven by Boldness.</h4>
+      </div>
+          <div class="impact-paragraph" style="font-size: 22px; padding-bottom: 10px;padding-left: 20px">
+     
+           At Silver Piston, we don't just operate — we evolve. Our brand philosophy is shaped by values that turn ambition into action.
+          </div>
+
+
+
+
+           <div class="brand-boxes">
+
+<div class="brand-box">
+  <div class="left-side">
+    <!-- <i class="ri-team-line"></i> -->
+    <img src="/images/Frame 1000005200.svg" alt="">
+    <h4>Co-Leadership</h4>
+  </div>
+  <div class="brand-content">
+    <h5>We grow together.</h5>
+    <p>
+      Leadership here isn’t defined by hierarchy, but by collaboration, trust, and shared wins.</p>
+  </div>
+</div>
+<div class="brand-box">
+  <div class="left-side">
+    <!-- <i class="ri-team-line"></i> -->
+    <img src="/images/Frame 1000005201.svg" alt="">
+
+    <h4>Bold</h4>
+  </div>
+  <div class="brand-content">
+    <h5>Take the leap.</h5>
+    <p>
+    We back brave decisions. Whether it’s a new idea or a bold pivot, our culture rewards action over comfort.
+    </p>
+  </div>
+</div>
+<div class="brand-box">
+  <div class="left-side">
+    <!-- <i class="ri-team-line"></i> -->
+     <img src="/images/Frame 1000005204.svg" alt="">
+    <h4>Mobility</h4>
+  </div>
+  <div class="brand-content">
+    <h5>Always in motion.</h5>
+    <p>
+      We believe progress is continuous. Tools, mindsets, markets — we’re always exploring the next frontier.
+    </p>
+  </div>
+</div>
+<div class="brand-box">
+  <div class="left-side">
+    <!-- <i class="ri-team-line"></i> -->
+     <img src="/images/Frame 1000005206.svg" alt="">
+    <h4>Responsiblity</h4>
+  </div>
+  <div class="brand-content">
+    <h5>Own your impact.</h5>
+    <p>
+      Every task matters. Every choice counts. We do things the impactful way — and the right way.
+    </p>
+  </div>
+</div>
+
+     </div>
+</div>
+</section> 
+
+
+<section class="key-engagements fade-in" id="key">
+  <div class="header-banner">
+        <h1 class="" style="color: white; border-bottom: 3px solid white;"> Key Engagements</h1>
+        <!-- <h4 class="text-white" style="color: white;">Accelerating Potential. Driving Strategic Growth.</h4> -->
+      </div>
+ <!-- <div class="engagements-grid">
+    
+  
+    <div class="engagement-card">
+      <div class="card-title">Strategy</div>
+      <div class="hover-overlay">
+        <ul>
+          <li>Business Model Innovation</li>
+          <li>Cost Optimization</li>
+          <li>Growth Planning</li>
+          <li>SWOT Analysis</li>
+        </ul>
+      </div>
+    </div>
+
+   
+    <div class="engagement-card">
+      <div class="card-title">Insights & Analytics</div>
+      <div class="hover-overlay">
+        <ul>
+          <li>Big Data Analytics</li>
+          <li>Customer Segmentation</li>
+          <li>Market Intelligence</li>
+          <li>Strategic Forecasting</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="engagement-card">
+      <div class="card-title">Finance & Accounting</div>
+      <div class="hover-overlay">
+        <ul>
+          <li>Cost Benchmarking</li>
+          <li>Financial Analysis</li>
+          <li>Compliance</li>
+          <li>Efficiency Planning</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="engagement-card">
+      <div class="card-title">ERP/HR</div>
+      <div class="hover-overlay">
+        <ul>
+          <li>Process Automation</li>
+          <li>HR Management</li>
+          <li>Payroll Integration</li>
+          <li>Employee Analytics</li>
+        </ul>
+      </div>
+    </div>
+
+  </div> -->
+
+
+<div class="engagements-grid">
+
+  <!-- Card 1 -->
+  <div class="engagement-card" style="background-image: url('/images/BG.png');">
+    <div class="card-title">Strategy</div>
+    <div class="hover-overlay">
+      <ul>
+        <li>Business Model Innovation</li>
+        <li>Cost Optimization</li>
+        <li>Growth Planning</li>
+        <li>SWOT Analysis</li>
+      </ul>
+    </div>
+    <div class="image-overlay"></div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="engagement-card" style="background-image: url('/images/BG\ \(1\).png');">
+    <div class="card-title">Insights & Analytics</div>
+    <div class="hover-overlay">
+      <ul>
+        <li>Big Data Analytics</li>
+        <li>Customer Segmentation</li>
+        <li>Market Intelligence</li>
+        <li>Strategic Forecasting</li>
+      </ul>
+    </div>
+    <div class="image-overlay"></div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="engagement-card" style="background-image: url('/images/BG\ \(2\).png');">
+    <div class="card-title">Finance & Accounting</div>
+    <div class="hover-overlay">
+      <ul>
+        <li>Cost Benchmarking</li>
+        <li>Financial Analysis</li>
+        <li>Compliance</li>
+        <li>Efficiency Planning</li>
+      </ul>
+    </div>
+    <div class="image-overlay"></div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="engagement-card" style="background-image: url('/images/BG\ \(3\).png');">
+    <div class="card-title">ERP/HR</div>
+    <div class="hover-overlay">
+      <ul>
+        <li>Process Automation</li>
+        <li>HR Management</li>
+        <li>Payroll Integration</li>
+        <li>Employee Analytics</li>
+      </ul>
+    </div>
+    <div class="image-overlay"></div>
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="service fade-in" id="services">
+        <div class="header-banner">
+        <h1 class="" style="color: black; border-bottom: 3px solid black;">Services</h1>
+        <h4 class="text-white" style="color: #626262;">Designed for Today. Ready for Tomorrow.</h4>
+      </div>
+          <div class="impact-para" style="font-size: 22px; padding-bottom: 10px;">
+    We provide integrated, future-focused services across four key areas:
+      </div>
+
+
+    
+
+
+         <div class="two-boxes fade-in">
+        <div class="left-box fade-in">
+          <img src="/images/image.png" alt="">
+        </div>
+        <div class="right-box fade-in">
+          <h1>Finance  & Accounting</h1>
+          <div class="right-box-child">
+            <li>future-ready finance :</li>
+            <p>
+Build agile finance functions that thrive in an ever-changing environment. 
+            </p>
+          </div>
+           <div class="right-box-child">
+            <li>Automation-Driven Efficiency : </li>
+            <p>
+            
+Automate data processes to free up resources for high-impact decision-making.
+            </p>
+          </div>
+        </div>
+      </div>
+
+        <div class="two-boxes fade-in">
+      
+        <div class="right-box">
+          <h1>Strategy & Insights</h1>
+          <div class="right-box-child">
+            <li style="list-style: none;" class="dusra-box">
+              <span><img src="./images/arrowicons.svg" alt="">
+              </span>
+              
+
+
+   Value Creation :</li>
+            <p>
+           Use business intelligence to unlock 360-degree organizational growth.
+            </p>
+          </div>
+           <div class="right-box-child">
+              <li style="list-style: none;" class="dusra-box">
+              <span><img src="./images/arrowicons.svg" alt="">
+              </span>
+              
+              Data Governance :  </li>
+            <p>
+          Combine market understanding with predictive tools to refine decision-making and reduce risk.
+            </p>
+          </div>
+        </div>
+          <div class="left-box">
+          <img src="/images/Container.png" alt="">
+        </div>
+      </div>
+
+         <div class="two-boxes fade-in">
+        <div class="left-box">
+          <img src="/images/image (1).png" alt="">
+        </div>
+        <div class="right-box">
+          <h1>Collaborative Execution</h1>
+          <div class="right-box-child">
+            <li>Critical Path Optimization :</li>
+            <p>
+            Accelerate delivery by streamlining the most crucial steps of every project.
+            </p>
+          </div>
+           <div class="right-box-child">
+            <li>Stakeholder Experience Design :</li>
+            <p>
+            Create meaningful, productive experiences for every participant in the value chain.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+         <div class="two-boxes fade-in">
+   
+        <div class="right-box">
+          <h1>Service Automation & ERP</h1>
+          <div class="right-box-child">
+             <li style="list-style: none;" class="dusra-box">
+              <span><img src="./images/arrowicons.svg" alt="">
+              </span>
+               Digital-First Operations :</li>
+            <p>
+           Use automation and AI to drive smarter, leaner, tech-enabled workflows.
+            </p>
+          </div>
+           <div class="right-box-child">
+               <li style="list-style: none;" class="dusra-box">
+              <span><img src="./images/arrowicons.svg" alt="">
+              </span>
+               End-to-End Efficiency : </li>
+            <p>
+           From procurement to HR, we help scale and simplify core processes for lasting impact.
+            </p>
+          </div>
+        </div>
+             <div class="left-box">
+          <img src="/images/Frame 1000005244.png" alt="">
+        </div>
+      </div>
+
+
+
+</section> 
+
+
+
+
+
+     <div class="join-us fade-in">
+      <section>
+        <div class="header-banner" >
+        <h1 class="" style="color: white; border-bottom: 3px solid white;">Join Us</h1>
+        <h4 class="text-white" style="color: white;">Accelerating Potential. Driving Strategic Growth.</h4>
+      </div>
+      </section>
+
+      <!-- <div class="view-buttons">
+        <a href="">
+          View All  
+
+        </a>
+      </div> -->
+
+   <div class="jobs-listing">
+ <div class="view-buttons">
+        <a href="">
+          View All  
+
+        </a>
+      </div>
+  <!-- JOB ITEM 1 -->
+
+  <div class="job-card active">
+    <div class="job-header">
+      <h3>Intern– Accounting Practice</h3>
+      <span class="toggle-icon"></span>
+    </div>
+    <div class="job-content">
+      <p>
+        As an Intern in the Accounting Practice team, you will be part of the global Accounts Payable (AP) team and receive on-the-job training in Procure-to-Pay and Record-to-Report processes. During the internship, you will gain hands-on experience with Oracle ERP and support the AP team in various key activities including vendor invoice and payment processing, vendor account reconciliation, and other day-to-day operations.
+      </p>
+      <button class="apply-btn">Apply</button>
+    </div>
+  </div>
+
+  <!-- JOB ITEM 2 -->
+  <div class="job-card">
+    <div class="job-header">
+      <h3>Strategy Analyst</h3>
+      <span class="toggle-icon"></span>
+    </div>
+    <div class="job-content">
+      <p>
+        As a Strategy Analyst, you will support business strategy development, market research, and assist leadership in key decision-making processes.
+      </p>
+      <button class="apply-btn btn">Apply</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="joinus-img">
+  <h3>
+ At Silverpiston, every day is an opportunity to lead, learn, and create meaningful impact. We believe in purpose-driven work — where collaboration powers progress and ambition meets support.
+  </h3>
+</div>
+<div class="joinus-next-box">
+  <h2 class="joinus-type">A typical day at SP:</h2>
+
+<div class="joinus-boxes">
+  <div class="joinus-box">
+    <div class="joinis-box-img">
+      <img src="/images/Frame 1000005224.png" alt="">
+    </div>
+    <div class="joinus-box-content">
+      <h2> Plan with Purpose </h2>
+      <p>
+      Start with intent. Align priorities and goals with your team to make each day count.
+      </p>
+    </div>
+  </div>
+    <div class="joinus-box">
+    <div class="joinis-box-img">
+      <img src="/images/Frame 1000005157.png" alt="">
+    </div>
+    <div class="joinus-box-content">
+      <h2>Collaborate to Elevate</h2>
+   <p>Work in sync with diverse teams, share ideas openly, and push each other forward.</p>
+    </div>
+  </div>
+    <div class="joinus-box">
+    <div class="joinis-box-img">
+      <img src="/images/Frame 1000005224 (1).png" alt="">
+    </div>
+    <div class="joinus-box-content">
+      <h2> Deliver & Reflect </h2>
+   <p>End with action. Deliver on goals, learn from results, and evolve your path.</p>
+    </div>
+  </div>
+</div>
+
+<div class="joinus-last">
+  <span class="joinus-last-content">
+Do your thing. Lead the change. Join Silverpiston.
+  </span>
+</div>
+
+</div>
+
+         
+      </div>
+
+
+      <div class="footer">
+        <h2>2025 Managed By <span>Silverpiston</span> </h2>
+      </div>
+
+
+    </div>
+
+<!-- 
+  <script>
+    // Simple JavaScript slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-text');
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+  </script> -->
+  <script>
+  function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector("#about");
+    const left = document.querySelector(".reveal-left");
+    const right = document.querySelector(".reveal-right");
+    const headerBanner = document.querySelector(".header-banner");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          left.classList.add("show");
+          right.classList.add("show");
+          headerBanner.classList.add("border-animate");
+        }
+      });
+    }, {
+      threshold: 0.4
+    });
+
+    observer.observe(section);
+  });
+</script>
+      <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const boxes = document.querySelectorAll(".impactsection-icons-db-box");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            boxes.forEach((box, i) => {
+              setTimeout(() => {
+                box.classList.add("animate");
+              }, i * 100); // 300ms delay between each box
+            });
+            observer.disconnect(); // Trigger once
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 30% is visible
+      }
+    );
+
+    observer.observe(document.querySelector(".impactsection-icons-db-box"));
+  });
+</script>
+      <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const boxes = document.querySelectorAll(".engagement-card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            boxes.forEach((box, i) => {
+              setTimeout(() => {
+                box.classList.add("animate");
+              }, i * 300); // 300ms delay between each box
+            });
+            observer.disconnect(); // Trigger once
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 30% is visible
+      }
+    );
+
+    observer.observe(document.querySelector(".engagement-card"));
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p");
+
+    textElements.forEach(el => {
+      el.classList.add("text-animate");
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    textElements.forEach(el => observer.observe(el));
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const left = document.querySelector(".about-left");
+    const right = document.querySelector(".about-right");
+
+    // Show left section immediately
+    setTimeout(() => {
+      left.classList.add("animate-left");
+    }, 200); // small delay to trigger smoothness
+
+    // Show right section after delay
+    setTimeout(() => {
+      right.classList.add("animate-bottom");
+    }, 1200); // 1s delay after left animation
+  });
+</script>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.fade-in').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+<!-- <script>
+  const jobCards = document.querySelectorAll(".job-card");
+
+  jobCards.forEach(card => {
+    const header = card.querySelector(".job-header");
+
+    header.addEventListener("click", () => {
+      const isActive = card.classList.contains("active");
+
+      jobCards.forEach(c => {
+        c.classList.remove("active");
+        c.querySelector(".toggle-icon").textContent = "+";
+      });
+
+      if (!isActive) {
+        card.classList.add("active");
+        card.querySelector(".toggle-icon").textContent = "−";
+      }
+    });
+  });
+</script> -->
+
+<!-- <script>
+  const jobCards = document.querySelectorAll(".job-card");
+
+  jobCards.forEach(card => {
+    const header = card.querySelector(".job-header");
+    const icon = card.querySelector(".toggle-icon");
+    const content = card.querySelector(".job-content");
+
+    header.addEventListener("click", () => {
+      const isActive = card.classList.contains("active");
+
+      if (isActive) {
+        // agar already open hai to close karo
+        card.classList.remove("active");
+
+        // jab transition khatam ho to "+" show karo
+        content.addEventListener("transitionend", function handler() {
+          if (!card.classList.contains("active")) {
+            icon.textContent = "+";
+          }
+          content.removeEventListener("transitionend", handler);
+        });
+
+      } else {
+        // sabhi cards close karo
+        jobCards.forEach(c => {
+          c.classList.remove("active");
+          c.querySelector(".toggle-icon").textContent = "+";
+        });
+
+        // current open karo
+        card.classList.add("active");
+        icon.textContent = "−";
+      }
+    });
+  });
+</script> -->
+
+
+
+<script>
+  const jobCards = document.querySelectorAll(".job-card");
+
+  jobCards.forEach(card => {
+    const header = card.querySelector(".job-header");
+
+    header.addEventListener("click", () => {
+      const isActive = card.classList.contains("active");
+
+      // sabhi band karo
+      jobCards.forEach(c => c.classList.remove("active"));
+
+      // agar current active nahi tha to open karo
+      if (!isActive) {
+        card.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500); // Smooth fade-out
+  });
+</script>
+
+
+</body>
+</html>
