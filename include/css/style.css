@@ -829,7 +829,7 @@ opacity: 0.7;
     letter-spacing: 1px;
   font-size: 18px ;
   line-height: 28px;
-  opacity: 71%;
+  /* opacity: 71%; */
   /* opacity: 0; */
   transition: max-height 0.4s ease;
 }
