@@ -1734,3 +1734,15 @@ font-size: 20px;
 .job-card.active .toggle-icon::before {
   transform: translateX(-50%) rotate(90deg); /* ghumake vertical ko horizontal jaisa kar do */
 }
+/* contact */
+.Contact-card {
+    background-color: #3b343d;
+;
+    color: white;
+    margin-bottom: 20px;
+    border: 1px solid #2b272b;
+    padding: 20px 20px;
+    /* transition: all 0.3s ease; */
+    height: 101%;
+     font-family: var(--primary-font-family);
+}
