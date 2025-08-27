@@ -1746,3 +1746,16 @@ font-size: 20px;
     height: 101%;
      font-family: var(--primary-font-family);
 }
+.Contact-us{
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 40px;
+padding-bottom: 40px;
+}
+/* 1025px se upar apply hoga */
+@media (min-width: 1030px) {
+  .Contact-us{
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
