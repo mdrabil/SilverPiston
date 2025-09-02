@@ -83,7 +83,7 @@ section{
       position: absolute;
       width: 100%;
      max-width: 1520px;
-     position: fixed;
+     /* position: fixed; */
 top: 0;
 left: 0;
 right: 0;
@@ -231,6 +231,10 @@ padding: 40px 0;
       background: url('/images/Frame\ 1000005142\ \(2\).png') no-repeat center center/cover;
   
     }
+       .job-page {
+      background: url('/images/jobImg.png') no-repeat center center/cover;
+  
+    }
 .home-container{
   height: 100vh;
   display: flex;
@@ -249,6 +253,13 @@ padding: 40px 0;
 
     .home-page {
       background: url('/images/Frame 1000005142 (2).png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+    .job-page {
+      background: url('/images/jobImg.png') no-repeat center center/cover;
       height: 100vh;
       display: flex;
       overflow: hidden;
@@ -868,6 +879,27 @@ opacity: 0.7;
 .apply-btn:hover {
   background-color: #FF4F01;
 }
+.Contactbtn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  float: right;
+  border: 1px solid white;
+  padding: 10px 27px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  
+  transition: background 0.3s ease;
+}
+
+/* .Contactbtn:hover {
+  background-color: white;
+  color: black;
+   font-size: 16px;
+  font-weight: 800;
+} */
 .view-buttons{
   color: var(--primary-color);
   /* padding: 0 140px 20px 120px; */
@@ -997,6 +1029,13 @@ opacity: 0.7;
     color: white;
     padding-bottom: 20px;
     border-bottom: 2px solid white;
+}
+.Unlock{
+    width: fit-content;
+    font-size: 40px;
+    color: white;
+    padding-bottom: 20px;
+    /* border-bottom: 2px solid white; */
 }
 
 .footer{
@@ -1430,24 +1469,17 @@ opacity: 0.7;
     align-items: center;
     justify-content: center;
   }
-
+  .job-page {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
    .home-page .scrolling-text {
     align-items: center;
     justify-content: center;
     padding-left: 5px ;
     padding-right: 10px;
-       /* .scrolling-text {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      justify-content: center;
-      padding-left: 30px;
-      padding-top: 100px;
-    } */
   }
 
   .text-item {
@@ -1603,24 +1635,19 @@ opacity: 0.7;
     align-items: center;
     justify-content: center;
   }
+   .job-page {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
    .home-page .scrolling-text {
     align-items: center;
     justify-content: center;
     padding-left: 5px ;
     padding-right: 10px;
-       /* .scrolling-text {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      justify-content: center;
-      padding-left: 30px;
-      padding-top: 100px;
-    } */
+
   }
 
   .text-item {
@@ -1690,7 +1717,14 @@ font-size: 20px;
     color: white;
     padding-bottom: 20px;
     border-bottom: 2px solid white;
-}
+
+  .Unlock{
+    width: fit-content;
+    font-size: 18px;
+    color: white;
+    padding-bottom: 20px;
+  
+}  }
 
 
 
@@ -1812,3 +1846,101 @@ padding-right: 130px;
 
 }
 }
+
+/*  */
+ ease;
+}
+
+
+
+
+
+
+.job-card.active .job-content {
+  max-height: 600px; /* adjust as per content */
+  /* transition: max-height 1s ease; */
+
+}
+
+/* toggle icon container */
+.toggle-icon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.toggle-icon:hover::before,
+.toggle-icon:hover::after {
+  background: #FF7F00;
+}
+/* vertical line (always visible = “|”) */
+.toggle-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+/* horizontal line (−) */
+.toggle-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+/* when active → rotate vertical line to hide = minus sign */
+.job-card.active .toggle-icon::before {
+  transform: translateX(-50%) rotate(90deg); /* ghumake vertical ko horizontal jaisa kar do */
+}
+/* contact */
+.Contact-card {
+    background-color: #3b343d;
+;
+    color: white;
+    margin-bottom: 20px;
+    border: 1px solid #2b272b;
+    padding: 20px 20px;
+    /* transition: all 0.3s ease; */
+    height: 101%;
+     font-family: var(--primary-font-family);
+}
+.Contact-us{
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 40px;
+padding-bottom: 40px;
+}
+  #join-now-header{
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 40px;
+padding-bottom: 40px;
+}
+/* 1025px se upar apply hoga */
+@media (min-width: 1030px) {
+  .Contact-us{
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  #join-now-header{
+padding-left: 130px;
+padding-right: 130px;
+
+}
+}
+
+/*  */
